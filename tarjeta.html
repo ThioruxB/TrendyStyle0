@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style_pago.css">
+    <title>PAGO</title>
+</head>
+<body>
+      <!-- Encabezado -->
+      <header id="inicio">
+        <img src="img/logo.jpeg" alt="logo">
+        <h1>Trendy-Style</h1>
+        <img src="img/logo.jpeg" alt="logo">
+    </header>
+    <!-- Navegacion -->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catalogo/Categorias</a>
+        <a href="pago.html">Escoger tipo de pago</a>
+        <a href="ingreso.html">Salir</a>
+    </nav>
+    <span class="border border-info">
+    <div class="container-fluid col-5 border bg-body-secondary rounded shadow-lg mg-button-10px ">
+        <!-- Formulario de pago -->
+        <form class="was-validated" action="tarjeta.html">
+            <h1 class="text-center"> Pago por tarjeta</h1>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Tipo de tarjeta</label>
+                <select class="form-control"  required>
+                    <option value="">Selecciona el tipo de tarjeta</option>
+                    <option value="t_credito">Tarjeta de credito</option>
+                    <option value="t_debito">Tarjeta de debito</option>
+                </select>
+                
+                <div class="invalid-feedback">
+                    Por favor escoge tu tipo de tarjeta.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Numero de tarjeta</label>
+                <input type="tel" class="form-control"  required pattern="[0-9]{14,18}"title="pon la cantidad de numeros validos" placeholder="EJ: 12345678912345">
+                <div class="invalid-feedback">
+                    Por favor ingresa correctamente tu numero de tarjeta.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label  class="form-label">Codigo cvc</label>
+                <input class="form-control"  type="tel" name="cvc" pattern="[0-9]{3,4}" placeholder="EJ:1234" title="pon entre 3 a 4 numeros" required>
+                <div class="invalid-feedback">
+                    Por favor ingresa correctamente el cvc.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Fecha de expedicion</label>
+                <input type="date" class="form-control" required>
+                <div class="invalid-feedback">
+                    Por favor ingresa la fecha de expedicion.
+                </div>
+            </div>
+            <div class="row mb-3 d-flex justify-content-center">
+                <div class="col-md-6 ">
+                   <button onclick="Pagar()" class="btn btn-dark col-12 ">Pagar</button>  
+                </div>
+            </div>
+        </form>
+    </div>
+    </span>
+    <!-- Footer -->
+    <footer> 
+        <img id="logofooter" src="img/logo.png" alt="">
+        <div class="contengotodo">
+            <div class="img">
+                <img src="img/contacto.png" alt="contactoicon">
+                <h2>Escribenos</h2>
+               </div>
+               <div class="texto">
+                <p>bustamanteparrabryanalexander@gmail.com</p>
+                <p>luisandrestovarr2019@gmail.com</p>
+                <p>hoonluv4@gmail.com</p>
+                <p>sebastiangalindo@gmail.com</p>
+               </div>         
+        </div>
+        <div class="contengotodo">
+            <div class="img">
+                <img src="img/llamada.png" alt="">
+                <h2>LLamanos</h2>
+            </div>
+            <div class="texto">
+                <p>3015823912</p>
+                <p>313 4177450</p>
+                <p>315 2594007</p>
+                <p>317 5158394</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function Pagar(){
+            Swal.fire({
+                title: "Compra exitosa!",
+                text: "muchas gracias por tu compra!",
+                icon: "success"
+        });
+        }
+                
+    </script>
+</body>
+</html>

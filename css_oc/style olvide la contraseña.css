@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+.menu{
+    padding-left: 10px;
+   justify-content: center;
+   text-align: center;
+   margin: 100px 500px ;
+   background-color: rgba(78, 78, 77, 0.467);
+   font-size: 20px;
+   font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: solid 5px;
+  border-radius: 5%;
+  box-flex: center;
+  align-items: center;
+}
+button{
+    margin: 10px 0px 10px;
+    font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.mensaje{
+    padding-left: 10px;
+   justify-content: center;
+   text-align: center;
+   margin: 100px 100px 100px; 
+   font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+img{
+    margin: 10px;
+    border-radius: 5%;
+    width: 50%;
+}
+#exampleInputEmail1{
+    width: 50%;
+    margin: 0px 250px;
+}
+#exampleInputPassword1{
+    width: 50%;
+    margin: 0px 250px;
+}

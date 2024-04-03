@@ -1,0 +1,16 @@
+.menu{
+    padding-left: 10px;
+   justify-content: center;
+   text-align: center;
+   margin: 100px 100px 100px;
+   background-color: rgba(78, 78, 77, 0.467);
+}
+.button{
+    margin: 10px 0px 10px;
+}
+.mensaje{
+    padding-left: 10px;
+   justify-content: center;
+   text-align: center;
+   margin: 100px 100px 100px; 
+}

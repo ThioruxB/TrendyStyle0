@@ -1,0 +1,382 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylecatalogo.css">
+    <link rel="stylesheet" href="iconos/css/all.css">
+    <title>Camisas</title>
+ </head>
+ <body>
+       <!--encabezado-->
+       <header id="inicio">
+        <img src="img/logo.jpeg" alt="logo">
+        <h1>Trendy-Style</h1>
+        <img src="img/logo.jpeg" alt="logo">
+    </header>
+    <!--navegacion-->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catalogo/Categorias</a>
+        <a href="ingreso.html">Salir</a>
+        <button class="btn anav  " onclick="Totalpage1()" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+            <i class="fa-solid fa-bag-shopping fa-2xl" style="color: #E3E3E3;"></i>
+        </button>
+    </nav>
+    <!--MODAL CARRITO-->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Tu carrito</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <h2>Productos</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td class="profoto">
+                                        <img src="img/buzos.jpg" alt="">
+                                        <p>Buzos</p>
+                                    </td>
+                                    <td class="table-price" id="precio">120.000</td>
+                                    <td class="d-flex justify-content-center align-items-center">
+                                        <button class="rounded-circle"><i class="fa-solid fa-plus fa-flip-both "></i></button>
+                                        <h2>1</h2>
+                                        <button class="rounded-circle"><i class="fa-solid fa-minus "></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td class="profoto">
+                                        <img src="img/camisa3.jpg" alt="">
+                                        <p>Camisa</p>
+                                    </td>
+                                    <td class="table-price" id="precio">80.000</td>
+                                    <td class="d-flex justify-content-center align-items-center">
+                                        <button class="rounded-circle"><i class="fa-solid fa-plus fa-flip-both "></i></button>
+                                        <h2>1</h2>
+                                        <button class="rounded-circle"><i class="fa-solid fa-minus "></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td class="profoto">
+                                        <img src="img/pantalon.jpg" alt="pantalon">
+                                        <p>Pantalon</p>
+                                    </td>
+                                    <td class="table-price" id="precio">100.000</td>
+                                    <td class="d-flex justify-content-center align-items-center">
+                                        <button class="rounded-circle"><i class="fa-solid fa-plus fa-flip-both "></i></button>
+                                        <h2>1</h2>
+                                        <button class="rounded-circle"><i class="fa-solid fa-minus "></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td class="profoto">
+                                        <img src="img/chaqueta.jpg" alt="chaqueta">
+                                        <p>Chaqueta</p>
+                                    </td>
+                                    <td class="table-price" id="precio">150.000</td>
+                                    <td class="d-flex justify-content-center align-items-center">
+                                        <button class="rounded-circle"><i class="fa-solid fa-plus fa-flip-both "></i></button>
+                                        <h2>1</h2>
+                                        <button class="rounded-circle"><i class="fa-solid fa-minus "></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td class="profoto">
+                                        <img src="img/zapato3.jpg" alt="zapato">
+                                        <p>Zapato</p>
+                                    </td>
+                                    <td class="table-price" id="precio">60.000</td>
+                                    <td class="d-flex justify-content-center align-items-center">
+                                        <button class="rounded-circle"><i class="fa-solid fa-plus fa-flip-both "></i></button>
+                                        <h2>1</h2>
+                                        <button class="rounded-circle"><i class="fa-solid fa-minus "></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <td>TOTAL</td>
+                            <td  id="total"></td>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark"  data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><a class="nav-link" href="pago.html">Pagar</a></button>
+                    <button class="btn btn-dark" onclick="Totalpage2()" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Segunda pagina</button>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Tu carrito</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <h2>Productos</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Cantidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td class="profoto">
+                                        <img src="img/chanclas.jpg" alt="chanclas">
+                                        <p>Chanclas</p>
+                                    </td>
+                                    <td class="table-price2">50.000</td>
+                                    <td class="d-flex justify-content-center align-items-center">
+                                        <button class="rounded-circle"><i class="fa-solid fa-plus fa-flip-both "></i></button>
+                                        <h2>1</h2>
+                                        <button class="rounded-circle"><i class="fa-solid fa-minus "></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td class="profoto">
+                                        <img src="img/camisa7.jpg" alt="camisa">
+                                        <p>Camisa</p>
+                                    </td>
+                                    <td class="table-price2">70.000</td>
+                                    <td class="d-flex justify-content-center align-items-center">
+                                        <button class="rounded-circle"><i class="fa-solid fa-plus fa-flip-both "></i></button>
+                                        <h2>1</h2>
+                                        <button class="rounded-circle"><i class="fa-solid fa-minus "></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td class="profoto">
+                                        <img src="img/gala4.jpg" alt="gala">
+                                        <p>Gala</p>
+                                    </td>
+                                    <td class="table-price2">180.000</td>
+                                    <td class="d-flex justify-content-center align-items-center">
+                                        <button class="rounded-circle"><i class="fa-solid fa-plus fa-flip-both "></i></button>
+                                        <h2>1</h2>
+                                        <button class="rounded-circle"><i class="fa-solid fa-minus "></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td class="profoto">
+                                        <img src="img/deportivo2.jpg" alt="deportivo">
+                                        <p>Ropa deportiva</p>
+                                    </td>
+                                    <td class="table-price2">130.000</td>
+                                    <td class="d-flex justify-content-center align-items-center">
+                                        <button class="rounded-circle"><i class="fa-solid fa-plus fa-flip-both "></i></button>
+                                        <h2>1</h2>
+                                        <button class="rounded-circle"><i class="fa-solid fa-minus "></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td class="profoto">
+                                        <img src="img/vestido5.jpg" alt="vestido">
+                                        <p>Vestido</p>
+                                    </td>
+                                    <td class="table-price2">200.000</td>
+                                    <td class="d-flex justify-content-center align-items-center">
+                                        <button class="rounded-circle" onclick="masCantidad()"><i class="fa-solid fa-plus fa-flip-both "></i></button>
+                                        <h2 class="cantidad">1</h2>
+                                        <button class="rounded-circle" onclick="menosCantidad()"><i class="fa-solid fa-minus "></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <td>TOTAL</td>
+                            <td  id="total2"></td>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark"  data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><a class="nav-link" href="pago.html">Pagar</a></button>
+                    <button class="btn btn-dark" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Volver</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <!--Catalogo-->
+ <main class="catalogos">
+    <div class="foto">
+        <div  > 
+            <img  src="img/camisa1.jpg" alt="camisa">
+            <h2>Camiseta blanca</h2>
+           
+            <div class="boton">
+                <button onclick="AñadidoCarrito()" id="botonCarrito"><img src="img/carrito.png" alt="carrito"></button>
+                <button><img src="img/corazon.png" alt="corazon"></button>
+                <button><img src="img/estrella.png" alt="estrella"></button>
+            </div>
+        </div>
+            <div>
+                <img src="img/camisa2.jpg" alt="camisa">
+                <h2>Camisa blanca</h2>
+                <div class="boton">
+                    <button onclick="AñadidoCarrito()" id="botonCarrito"><img src="img/carrito.png" alt="carrito"></button>
+                    <button><img src="img/corazon.png" alt="corazon"></button>
+                    <button><img src="img/estrella.png" alt="estrella"></button>
+                </div>
+            </div>
+                <div>
+                    <img src="img/camisa3.jpg" alt="camisa">
+                    <h2>Camisa con cuadros</h2>
+                    <div class="boton">
+                        <button onclick="AñadidoCarrito()" ><img src="img/carrito.png" alt="carrito"></button>
+                        <button><img src="img/corazon.png" alt="corazon"></button>
+                        <button><img src="img/estrella.png" alt="estrella"></button>
+                    </div>
+                </div>
+                    <div>
+                        <img src="img/camisa4.jpg" alt="camisa">
+                        <h2>Camiseta de superheroes</h2>
+                        <div class="boton">
+                            <button onclick="AñadidoCarrito()" ><img src="img/carrito.png" alt="carrito"></button>
+                            <button><img src="img/corazon.png" alt="corazon"></button>
+                            <button><img src="img/estrella.png" alt="estrella"></button>
+                        </div>
+                    </div>
+                        <div>
+                            <img src="img/camisa5.jpg" alt="camisa">
+                            <h2>Camiseta negra con letras</h2>
+                            <div class="boton">
+                                <button onclick="AñadidoCarrito()" ><img src="img/carrito.png" alt="carrito"></button>
+                                <button><img src="img/corazon.png" alt="corazon"></button>
+                                <button><img src="img/estrella.png" alt="estrella"></button>
+                            </div>
+                        </div>
+                            <div>
+                                <img src="img/camisa6.jpg" alt="camisa">
+                                <h2>Camiseta negra</h2>
+                                <div class="boton">
+                                    <button onclick="AñadidoCarrito()"><img src="img/carrito.png" alt="carrito"></button>
+                                    <button><img src="img/corazon.png" alt="corazon"></button>
+                                    <button><img src="img/estrella.png" alt="estrella"></button>
+                                </div>
+                            </div>
+                                <div>
+                                    <img src="img/camisa7.jpg" alt="camisa">
+                                    <h2>Camibuzo</h2>
+                                    <div class="boton">
+                                        <button onclick="AñadidoCarrito()" ><img src="img/carrito.png" alt="carrito"></button>
+                                        <button><img src="img/corazon.png" alt="corazon"></button>
+                                        <button><img src="img/estrella.png" alt="estrella"></button>
+                                    </div>
+                                </div>
+                               
+    </div>
+</main>
+  <!-- pie de pagina -->
+  <footer> 
+    <img id="logofooter" src="img/logo.png" alt="">
+    <div class="contengotodo">
+        <div class="img">
+            <img src="img/contacto.png" alt="contactoicon">
+            <h2>Escribenos</h2>
+           </div>
+           <div class="texto">
+            <p>
+                bustamanteparrabryanalexander@gmail.com
+            </p>
+            <p>
+                luisandrestovarr2019@gmail.com
+            </p>
+            <p>
+                hoonluv4@gmail.com
+            </p>
+            <p>
+                sebastiangalindo@gmail.com
+            </p>
+           </div>         
+    </div>
+<div class="contengotodo">
+<div class="img">
+    <img src="img/llamada.png" alt="">
+    <h2>LLamanos</h2>
+</div>
+<div class="texto">
+    <p>3015823912</p>
+    <p>313 4177450</p>
+    <p>315 2594007</p>
+    <p>317 5158394</p>
+</div>
+</div>
+   
+</footer>
+<script>
+      
+        //script de alerta de producto añadido al carrito
+        function AñadidoCarrito(){
+            Swal.fire({
+        title: "Producto añadido al carrito",
+        icon: "success"
+            });
+        }
+       //script total del carrito
+function Totalpage1() {
+    var precios = document.querySelectorAll(".table-price"); 
+    var total = 0;
+    precios.forEach(function(precio){
+        total += parseFloat(precio.textContent); 
+    });
+    document.getElementById("total").textContent = total.toFixed(3); 
+}
+function Totalpage2() {
+    var precios2 = document.querySelectorAll(".table-price2"); 
+    var total2 = 0;
+    precios2.forEach(function(precio2){
+        total2 += parseFloat(precio2.textContent); 
+    });
+    document.getElementById("total2").textContent = total2.toFixed(3); 
+}
+      // Script para agregar más cantidad
+    function masCantidad() {
+        var cantidad = document.querySelector(".cantidad");
+        cantidad.textContent = parseInt(cantidad.textContent) + 1;
+       
+    }
+        
+    
+    //scrip para quitar cantidad
+    function menosCantidad(){
+        var cantidad = document.querySelector(".cantidad");
+        cantidad.textContent = parseInt(cantidad.textContent) - 1;
+    }
+
+</script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+ </body>
+ </html>
+ 
